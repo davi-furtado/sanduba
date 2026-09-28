@@ -3,7 +3,7 @@
    ========================= */
 
 body {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* =========================
@@ -11,8 +11,8 @@ body {
    ========================= */
 
 :root {
-	--sanduba-amarelo: #ffc107;
-	--sanduba-vermelho: #dc3545;
+  --sanduba-amarelo: #ffc107;
+  --sanduba-vermelho: #dc3545;
 }
 
 /* =========================
@@ -20,18 +20,18 @@ body {
    ========================= */
 
 .hero {
-	min-height: 500px;
+  min-height: 500px;
 
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 
-	background:
-		linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-		url("../img/hamburguer.jpg") center / cover;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../img/hamburguer.jpg") center / cover;
 }
 
 .hero h1 {
-	font-weight: 800;
+  font-weight: 800;
 }
 
 /* =========================
@@ -39,16 +39,16 @@ body {
    ========================= */
 
 .product-card {
-	transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .product-card:hover {
-	transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .product-card img {
-	height: 220px;
-	object-fit: cover;
+  height: 220px;
+  object-fit: cover;
 }
 
 /* =========================
@@ -56,7 +56,7 @@ body {
    ========================= */
 
 .info-icon {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 /* =========================
@@ -64,16 +64,16 @@ body {
    ========================= */
 
 footer {
-	border-top: 1px solid var(--bs-border-color);
+  border-top: 1px solid var(--bs-border-color);
 }
 
 .social-link {
-	color: var(--bs-secondary-color);
-	text-decoration: none;
+  color: var(--bs-secondary-color);
+  text-decoration: none;
 }
 
 .social-link:hover {
-	color: var(--sanduba-amarelo);
+  color: var(--sanduba-amarelo);
 }
 
 /* =========================
@@ -81,11 +81,11 @@ footer {
    ========================= */
 
 @media (max-width: 768px) {
-	.hero {
-		min-height: 450px;
-	}
+  .hero {
+    min-height: 450px;
+  }
 
-	.hero h1 {
-		font-size: 2.5rem;
-	}
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }

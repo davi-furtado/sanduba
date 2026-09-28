@@ -1,11 +1,11 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-	server: {
-		host: true,
-	},
-	preview: {
-		host: true,
-	},
-});
+  server: {
+    host: true
+  },
+  preview: {
+    host: true
+  }
+})
