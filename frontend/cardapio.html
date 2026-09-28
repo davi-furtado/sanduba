@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cardápio | Sanduba Lanches</title>
+
+    <link rel="icon" href="assets/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <span class="text-warning">Sanduba</span> Lanches
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarPrincipal"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Início </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="cardapio.html"> Cardápio </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pedido.html"> Fazer pedido </a>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <button
+                id="themeToggle"
+                class="btn btn-outline-warning"
+                type="button"
+                aria-label="Alternar tema"
+              >
+                <i class="bi bi-sun-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h1 class="fw-bold">
+              Nosso <span class="text-warning">Cardápio</span>
+            </h1>
+
+            <p class="text-body-secondary">
+              Escolha seus favoritos e monte seu pedido.
+            </p>
+          </div>
+
+          <!-- Hambúrgueres -->
+          <h2 class="h3 border-bottom pb-2 mb-4">Hambúrgueres</h2>
+
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="card product-card h-100">
+                <img
+                  src="assets/hamburguer.jpg"
+                  class="card-img-top"
+                  alt="X-Burger Especial"
+                />
+
+                <div class="card-body">
+                  <h3 class="h5">X-Burger Especial</h3>
+
+                  <p class="text-body-secondary">
+                    Hambúrguer, queijo, bacon, alface, tomate e molho especial.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="text-warning fs-5"> R$ 22,90 </strong>
+
+                    <a href="pedido.html" class="btn btn-sm btn-danger">
+                      Pedir
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card product-card h-100">
+                <img
+                  src="assets/hamburguer.jpg"
+                  class="card-img-top"
+                  alt="X-Salada"
+                />
+
+                <div class="card-body">
+                  <h3 class="h5">X-Salada</h3>
+
+                  <p class="text-body-secondary">
+                    Hambúrguer, queijo, alface, tomate e molho especial.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="text-warning fs-5"> R$ 19,90 </strong>
+
+                    <a href="pedido.html" class="btn btn-sm btn-danger">
+                      Pedir
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card product-card h-100">
+                <img
+                  src="assets/hamburguer.jpg"
+                  class="card-img-top"
+                  alt="X-Bacon"
+                />
+
+                <div class="card-body">
+                  <h3 class="h5">X-Bacon</h3>
+
+                  <p class="text-body-secondary">
+                    Hambúrguer, queijo, bacon crocante e molho especial.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="text-warning fs-5"> R$ 24,90 </strong>
+
+                    <a href="pedido.html" class="btn btn-sm btn-danger">
+                      Pedir
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Porções -->
+          <h2 class="h3 border-bottom pb-2 mb-4">Porções</h2>
+
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="card product-card h-100">
+                <img
+                  src="assets/batata.jpg"
+                  class="card-img-top"
+                  alt="Batata frita"
+                />
+
+                <div class="card-body">
+                  <h3 class="h5">Batata Crocante</h3>
+
+                  <p class="text-body-secondary">
+                    Batata frita crocante acompanhada de molho especial.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="text-warning fs-5"> R$ 14,90 </strong>
+
+                    <a href="pedido.html" class="btn btn-sm btn-danger">
+                      Pedir
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebidas -->
+          <h2 class="h3 border-bottom pb-2 mb-4">Bebidas</h2>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card product-card h-100">
+                <img
+                  src="assets/refrigerante.jpg"
+                  class="card-img-top"
+                  alt="Refrigerante"
+                />
+
+                <div class="card-body">
+                  <h3 class="h5">Refrigerante</h3>
+
+                  <p class="text-body-secondary">
+                    Refrigerante gelado de 350 ml.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <strong class="text-warning fs-5"> R$ 6,00 </strong>
+
+                    <a href="pedido.html" class="btn btn-sm btn-danger">
+                      Pedir
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4">
+      <div class="container text-center">
+        <strong>Sanduba Lanches</strong>
+
+        <p class="text-body-secondary mb-0 mt-2">
+          Sabor que dá vontade de repetir.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
