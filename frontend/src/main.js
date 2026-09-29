@@ -25,10 +25,10 @@ function atualizarIconeTema() {
 
 // Alterna o tema
 themeToggle.addEventListener('click', () => {
-  const temaAtual = html.getAttribute('data-bs-theme')
+  const temaAtual = html.dataset.bsTheme
   const novoTema = temaAtual === 'dark' ? 'light' : 'dark'
 
-  html.setAttribute('data-bs-theme', novoTema)
+  html.dataset.bsTheme = novoTema
   localStorage.setItem('tema', novoTema)
   atualizarIconeTema()
 })

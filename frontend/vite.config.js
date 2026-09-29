@@ -1,7 +1,21 @@
 import { defineConfig } from 'vite'
+import { router } from './router.js'
 
-// https://vite.dev/config/
 export default defineConfig({
+  appType: 'mpa',
+  plugins: [router()],
+
+  build: {
+    rollupOptions: {
+      input: {
+        index: path.resolve(import.meta.dirname, 'index.html'),
+        cardapio: path.resolve(import.meta.dirname, 'cardapio.html'),
+        pedido: path.resolve(import.meta.dirname, 'pedido.html'),
+        404: path.resolve(import.meta.dirname, '404.html')
+      }
+    }
+  },
+
   server: {
     host: true
   },
