@@ -28,7 +28,7 @@ body {
   color: var(--bs-light);
   background:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url('assets/hamburguer.jpg') center / cover;
+    url("assets/hamburguer.jpg") center / cover;
 }
 
 .hero h1 {

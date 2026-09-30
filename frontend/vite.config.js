@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import path from 'node:path'
 import { router } from './router.js'
 
 export default defineConfig({

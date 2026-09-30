@@ -17,6 +17,8 @@ export function router({ pagesDir = '', notFound = '/404' } = {}) {
     return rel !== '' && !rel.startsWith('..') && !path.isAbsolute(rel)
   }
 
+  const toFile = (url) => path.resolve(root, `.${url}`)
+
   const redirect = (res, location) => {
     res.statusCode = 302
     res.setHeader('Location', location)
@@ -68,22 +70,23 @@ export function router({ pagesDir = '', notFound = '/404' } = {}) {
           // Clean URL -> arquivo HTML real
           const rel = decodeURIComponent(pathname).replace(/\/$/, '')
           const candidates = [withDir(`${rel}/index.html`)]
-          if (rel) candidates.unshift(withDir(`${rel}.html`))
+          if (rel) candidates.push(withDir(`${rel}.html`))
 
           for (const candidate of candidates) {
-            const file = path.resolve(root, '.' + candidate)
+            const file = toFile(candidate)
             if (isInside(file) && isFile(file)) {
-              req.url = candidate + search
+              req.url = `${candidate}${search}`
               return next()
             }
           }
 
           // 404 só para navegações de página
           if (req.headers.accept?.includes('text/html')) {
-            const file = path.resolve(root, '.' + withDir(`/${notFound}`))
+            const notFoundUrl = withDir(`/${notFound}`)
+            const file = toFile(notFoundUrl)
             if (isInside(file) && isFile(file)) {
               const html = await server.transformIndexHtml(
-                pathname,
+                notFoundUrl,
                 fs.readFileSync(file, 'utf-8')
               )
               res.statusCode = 404
