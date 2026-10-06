@@ -46,9 +46,25 @@
       const sandubaBasePath = location.pathname.startsWith('/sanduba/')
         ? '/sanduba/'
         : '/'
-      const script = document.createElement('script')
-      script.src = `${sandubaBasePath}js/404.js`
-      document.body.appendChild(script)
+      const sandubaAppendLink = (rel, href) => {
+        const link = document.createElement('link')
+        link.rel = rel
+        link.href = `${sandubaBasePath}${href}`
+        document.head.appendChild(link)
+      }
+      const sandubaAppendScript = (src) => {
+        const script = document.createElement('script')
+        script.src = `${sandubaBasePath}${src}`
+        document.body.appendChild(script)
+      }
+
+      sandubaAppendLink('icon', 'favicon.ico')
+      sandubaAppendLink('stylesheet', 'css/bootstrap.min.css')
+      sandubaAppendLink('stylesheet', 'css/bootstrap-icons.css')
+      sandubaAppendLink('stylesheet', 'css/style.css')
+      sandubaAppendScript('js/404.js')
+      sandubaAppendScript('js/bootstrap.bundle.min.js')
+      sandubaAppendScript('js/main.js')
     </script>
   </body>
 </html>
