@@ -43,18 +43,18 @@
     </main>
 
     <script>
-      const sandubaBasePath = location.pathname.startsWith('/sanduba/')
+      const sandubaAssetBasePath = location.pathname.startsWith('/sanduba/')
         ? '/sanduba/'
         : '/'
       const sandubaAppendLink = (rel, href) => {
         const link = document.createElement('link')
         link.rel = rel
-        link.href = `${sandubaBasePath}${href}`
+        link.href = `${sandubaAssetBasePath}${href}`
         document.head.appendChild(link)
       }
       const sandubaAppendScript = (src) => {
         const script = document.createElement('script')
-        script.src = `${sandubaBasePath}${src}`
+        script.src = `${sandubaAssetBasePath}${src}`
         document.body.appendChild(script)
       }
 
