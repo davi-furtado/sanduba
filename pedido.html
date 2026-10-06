@@ -7,8 +7,8 @@
     <title>Fazer pedido| Sanduba Lanches</title>
 
     <link rel="icon" href="favicon.ico" />
-      <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+      <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -74,7 +74,7 @@
 
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <form>
+              <form id="order-form" class="needs-validation" novalidate>
                 <!-- Dados do cliente -->
                 <div class="card mb-4">
                   <div class="card-header">
@@ -93,8 +93,10 @@
                         id="nome"
                         name="nome"
                         placeholder="Digite seu nome"
+                        minlength="2"
                         required
                       />
+                      <div class="invalid-feedback">Informe seu nome completo.</div>
                     </div>
 
                     <div class="row">
@@ -109,8 +111,10 @@
                           id="telefone"
                           name="telefone"
                           placeholder="(00) 00000-0000"
+                          pattern="[\d\s()+-]{8,}"
                           required
                         />
+                        <div class="invalid-feedback">Informe um telefone válido.</div>
                       </div>
 
                       <div class="col-md-6 mb-3">
@@ -123,6 +127,7 @@
                           name="email"
                           placeholder="seu@email.com"
                         />
+                        <div class="invalid-feedback">Informe um e-mail válido.</div>
                       </div>
                     </div>
                   </div>
@@ -164,6 +169,7 @@
                           Refrigerante - R$ 6,00
                         </option>
                       </select>
+                      <div class="invalid-feedback">Selecione um produto.</div>
                     </div>
 
                     <div class="mb-3">
@@ -181,6 +187,7 @@
                         value="1"
                         required
                       />
+                      <div class="invalid-feedback">Informe uma quantidade entre 1 e 20.</div>
                     </div>
 
                     <div class="mb-3">
@@ -233,6 +240,9 @@
                       <label class="form-check-label" for="entrega">
                         Entrega
                       </label>
+                    </div>
+                    <div id="receiving-feedback" class="invalid-feedback">
+                      Selecione uma forma de recebimento.
                     </div>
                   </div>
                 </div>
@@ -343,6 +353,9 @@
                         Cartão
                       </label>
                     </div>
+                    <div id="payment-feedback" class="invalid-feedback">
+                      Selecione uma forma de pagamento.
+                    </div>
                   </div>
                 </div>
 
@@ -358,6 +371,7 @@
                   <label class="form-check-label" for="confirmacao">
                     Confirmo que os dados do pedido estão corretos.
                   </label>
+                  <div class="invalid-feedback">Confirme os dados do pedido.</div>
                 </div>
 
                 <div class="d-flex gap-2">
@@ -386,9 +400,7 @@
       </div>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
-
-

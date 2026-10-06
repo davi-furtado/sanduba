@@ -9,19 +9,20 @@ document.querySelectorAll('[data-home]').forEach((link) => {
 const themeToggle = document.querySelector('#themeToggle')
 const savedTheme =
   localStorage.getItem('tema') ||
-  (window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light')
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 
 const renderTheme = (theme) => {
   const isDark = theme === 'dark'
-  document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light')
+  document.documentElement.setAttribute(
+    'data-bs-theme',
+    isDark ? 'dark' : 'light'
+  )
   themeToggle.innerHTML = isDark
     ? '<i class="bi bi-sun-fill" aria-hidden="true"></i>'
     : '<i class="bi bi-moon-fill" aria-hidden="true"></i>'
   themeToggle.setAttribute(
     'aria-label',
-    isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro',
+    isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'
   )
   themeToggle.title = isDark
     ? 'Mudar para modo claro'

@@ -27,6 +27,7 @@ Este projeto está seb a licença _MIT_. Consulte o arquivo [LICENSE](LICENSE) p
 
 ## Frontend estático
 
-As páginas públicas ficam na raiz do repositório para que o GitHub Pages consiga publicar o site sem um workflow YAML. Bootstrap e Bootstrap Icons são materializados localmente por 
-pm run prepare-assets; o deploy não executa npm.
-
+As páginas públicas ficam na raiz do repositório. Bootstrap e Bootstrap Icons são
+materializados em `src/` (ignorado pelo Git) por `npm run prepare-assets`; como
+não há workflow de deploy, execute esse comando antes de testar ou publicar
+manualmente o frontend.
