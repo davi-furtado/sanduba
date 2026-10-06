@@ -4,16 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "biome lint .",
-    "format": "biome format --write .",
-    "check": "biome check --write ."
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.5.14",
-    "vite": "^8.2.2"
+    "prepare-assets": "node scripts/copy-assets.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

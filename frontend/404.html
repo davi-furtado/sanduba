@@ -6,13 +6,31 @@
 
     <title>Página não encontrada | Sanduba Lanches</title>
 
-    <link rel="icon" href="/favicon.ico" />
+    <script>
+      const sandubaBasePath = location.pathname.startsWith('/sanduba/')
+        ? '/sanduba/'
+        : '/'
+      const icon = document.createElement('link')
+      icon.rel = 'icon'
+      icon.href = `${sandubaBasePath}favicon.ico`
+      document.head.appendChild(icon)
+      for (const href of [
+        'css/bootstrap.min.css',
+        'css/bootstrap-icons.css',
+        'css/style.css',
+      ]) {
+        const stylesheet = document.createElement('link')
+        stylesheet.rel = 'stylesheet'
+        stylesheet.href = `${sandubaBasePath}${href}`
+        document.head.appendChild(stylesheet)
+      }
+    </script>
   </head>
 
   <body>
     <nav class="navbar bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="/">
+        <a class="navbar-brand fw-bold" data-home href="#body">
           <span class="text-warning">Sanduba</span> Lanches
         </a>
 
@@ -37,12 +55,23 @@
           Parece que esse lanche foi parar no lugar errado.
         </p>
 
-        <a href="/" class="btn btn-warning fw-bold mt-3">
+        <a data-home href="#body" class="btn btn-warning fw-bold mt-3">
           Voltar para o início
         </a>
       </div>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.write(
+        `<script src="${sandubaBasePath}js/bootstrap.bundle.min.js"><\/script>`,
+      )
+      document.write(
+        `<script src="${sandubaBasePath}js/main.js"><\/script>`,
+      )
+      document.write(
+        `<script src="${sandubaBasePath}js/404-links.js"><\/script>`,
+      )
+    </script>
   </body>
 </html>
+
