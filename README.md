@@ -24,3 +24,9 @@ Site da lanchonete fictícia **Sanduba Lanches**. Feito com HTML, CSS, JavaScrip
 # Licença
 
 Este projeto está seb a licença _MIT_. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+
+## Frontend estático
+
+As páginas públicas ficam na raiz do repositório para que o GitHub Pages consiga publicar o site sem um workflow YAML. Bootstrap e Bootstrap Icons são materializados localmente por 
+pm run prepare-assets; o deploy não executa npm.
+
